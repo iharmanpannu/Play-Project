@@ -86,6 +86,10 @@ const sortByAge = inventors.sort((a, b) => {
 console.table(sortByAge);
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
+const lifeOfAllInventor = inventors.reduce((total, inventor) => {
+  return total + (inventor.passed - inventor.year);
+}, 0);
+console.log(lifeOfAllInventor);
 
 // 5. Sort the inventors by years lived
 
